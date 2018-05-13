@@ -25,7 +25,9 @@ class ForumDatabase:
         return mes_to_return
 
     def get_messages_count(self, title_name: str):
+        # messages = list(self.__messages.find({"title_name": title_name}))
         messages = list(self.__messages.find({"title_name": title_name}))
+        print(messages)
         authors_list = list({})
         for message in messages:
             authors_list.insert(len(authors_list), message["author"])
@@ -42,7 +44,8 @@ class ForumDatabase:
         self.__client.close()
 
 # forum = ForumDatabase()
-# print(forum.get_messages_count("Ітератори"))
+# forum.delete_all()
+# print(forum.get_messages_count("What is the return type of main?"))
 # forum.clear()
 # forum.get_messages_count("Ітератори")
 # message = {'d': "sdsdsd"}

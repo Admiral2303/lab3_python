@@ -1,10 +1,10 @@
 import string
 import nltk as nltk
 from nltk.stem.porter import PorterStemmer
+
 nltk.download('punkt')
 nltk.download('stopwords')
 from nltk.corpus import stopwords
-
 
 
 def stem_tokens(tokens, stemmer):
