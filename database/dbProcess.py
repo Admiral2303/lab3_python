@@ -17,6 +17,13 @@ class ForumDatabase:
     def get_titles(self):
         return list(self.__titles.find())
 
+    def get_messages(self) ->list:
+        messages = list(self.__messages.find())
+        mes_to_return = []
+        for message in messages:
+            mes_to_return.insert(len(mes_to_return), str(message["text"]))
+        return mes_to_return
+
     def get_messages_count(self, title_name: str):
         messages = list(self.__messages.find({"title_name": title_name}))
         authors_list = list({})
