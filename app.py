@@ -6,7 +6,7 @@ from database.dbProcess import ForumDatabase
 from strProcess import message_process
 from dataProcess import data_process
 from dataProcess import build_word_cloud
-from dataProcess import get_text_from_clasters
+from dataProcess import get_text_from_clusters
 
 
 def main(argv):
@@ -14,7 +14,7 @@ def main(argv):
     messages = database.get_messages()
     messages = message_process(messages)
     y = data_process(messages)
-    clusters_text = get_text_from_clasters(messages, y)
+    clusters_text = get_text_from_clusters(messages, y)
     build_word_cloud(clusters_text, "img1")
 
 

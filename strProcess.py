@@ -2,8 +2,8 @@ import string
 import nltk as nltk
 from nltk.stem.porter import PorterStemmer
 
-nltk.download('punkt')
-nltk.download('stopwords')
+# nltk.download('punkt')
+# nltk.download('stopwords')
 from nltk.corpus import stopwords
 
 
@@ -43,48 +43,4 @@ def message_process(messages):
         correct_messages.insert(len(correct_messages), message)
     return correct_messages
 
-#
-#
-#
-# corpus = ["This is very strange",
-#           "This is very nice",
-#           "My name is nice",
-#           "My name is Vadim and I`d like to play cs go",
-#           "This is very prety girl"]
-# corpus1 = ["My name is nice"]
-# vectorizer = TfidfVectorizer(min_df=1)
-# X = vectorizer.fit_transform(corpus)
-# k = 2
-# model = KMeans(n_clusters=k, random_state=0, n_jobs = -2)
-# model.fit(X)
-# y = model.predict(X)
-# text = ""
-# text1 = ""
-# for idx,claster in enumerate(y):
-#     print(claster, corpus[idx])
-#     if claster == 0:
-#         text += corpus[idx] + " "
-#     if claster == 1:
-#         text1 += corpus[idx] + " "
 
-
-# wordcloud = WordCloud(background_color='white',
-#                           width=1200,
-#                           height=1000
-#                       ).generate(text)
-#                          # ).generate(" ".join(corpus))
-#
-# plt.imshow(wordcloud)
-# plt.axis('off')
-# plt.show()
-
-# wordcloud = WordCloud(background_color='white',
-#                           width=1200,
-#                           height=1000
-#                       ).generate(text1)
-#                          # ).generate(" ".join(corpus))
-#
-#
-# plt.imshow(wordcloud)
-# plt.axis('off')
-# plt.show()

@@ -14,15 +14,15 @@ def data_process(messages, k=2):
     return y
 
 
-def get_text_from_clasters(corpus, y):
-    text = []
-    for idx, claster in enumerate(y):
+def get_text_from_clusters(corpus, y):
+    text_arr = []
+    for idx, cluster in enumerate(y):
         try:
-            text[claster] += corpus[idx] + " "
+            text_arr[cluster] += corpus[idx] + " "
             print()
         except IndexError:
-            text.insert(claster, corpus[idx] + " ")
-    return text
+            text_arr.insert(cluster, corpus[idx] + " ")
+    return text_arr
 
 
 def build_word_cloud(text_arr, img_name):
